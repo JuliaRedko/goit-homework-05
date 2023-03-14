@@ -61,7 +61,7 @@ body {
     font-weight: 500;
     padding: 24px 0;
     position: relative;
-    transition: color var(--transition-main) linear;
+    transition: color var(--transition-main) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link.current::after {
@@ -603,7 +603,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     height: 100%;
     opacity: 0;
     transform: translateY(100%);
-    transition-property: transform;
+    transition-property: transform, opacity;
     transition-duration: var(--transition-main);
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -649,9 +649,6 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     height: 100%;
     visibility: visible;
     transition: opacity var(--transition-main) cubic-bezier(0.4, 0, 0.2, 1), visibility var(--transition-main) cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: opacity;
-    transition-duration: var(--transition-main);
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
@@ -666,7 +663,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    transition: transform var(--transition-main) linear;
+    transition: transform var(--transition-main) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close {
